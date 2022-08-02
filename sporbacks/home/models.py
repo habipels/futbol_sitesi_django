@@ -27,3 +27,4 @@ class club_vs(models.Model):
     takim2 = models.ForeignKey(clubs,related_name="takim2", blank=True,on_delete=models.CASCADE,null=True)
     gol2 = models.BigIntegerField()
     mac_durumu = models.BooleanField()
+    tarih = models.BigIntegerField(null = True)

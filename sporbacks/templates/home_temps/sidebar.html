@@ -53,61 +53,29 @@
                   <aside id="sidebar" class="left-bar">
                      <div class="feature-matchs">
                         <div class="team-btw-match">
+                           {% for i in karsilasma_goster %}
                            <ul>
+                              <li>
+                                 <img width="40" src="{{i.takim1.takim_logo.url}}" alt="">
+                                 <span>{{i.takim1}}</span>
+                              </li>
+                              {% if i.mac_durumu %}
+                              <li class="vs"><span>{{i.gol1}}</span></li>
+                              <li class="vs"><span>vs</span></li>
+                              <li class="vs"><span>{{i.gol2}}</span></li>
+                              {% else %}
+                              {{i.tarih}}
+                              <li class="vs"><span>vs</span></li>
+                              <
+                              {% endif %}
                               
-                                 <span>{{i.takim_isim}}</span>
-                              </li> 
-                              {% endfor %}
-                              <li class="vs"><span>vs</span></li>
                               <li>
-                                 <img src="images/img-02.png" alt="">
-                                 <span>Germany</span>
+                                 <img width="40" src="{{i.takim2.takim_logo.url}}" alt="">
+                                 <span>{{i.takim2}}</span>
                               </li>
                            </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-03_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-04_003.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-05_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-06.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-07_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-08.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-05_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-06.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
+                           {% endfor %}
+                           
                         </div>
                      </div>
                   </aside>
